@@ -1,9 +1,7 @@
-#noinspection CucumberUndefinedStep
 Feature: Udemy main page
 
   Scenario Outline: Open Udemy
     Given I open the <udemy_main> page
-
 
 
 

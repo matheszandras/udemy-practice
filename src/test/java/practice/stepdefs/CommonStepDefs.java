@@ -5,8 +5,8 @@ import practice.hooks.Hooks;
 
 public class CommonStepDefs {
 
-    @Given("^I open the (.+) page$")
-    public void I_open_udemy_main_page (String url) {
-        Hooks.getWebDriver().get(url);
+    @Given ("I open the main page")
+    public void I_open_udemy_main_page () {
+        Hooks.getWebDriver().get("https://www.udemy.com/");
     }
 }
