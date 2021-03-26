@@ -7,10 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Hooks {
 
-    /**
-     * WebDriverManager by bonigarcia: https://github.com/bonigarcia/webdrivermanager#basic-usage
-     */
-
     public static WebDriver chromeDriver;
 
     @Before

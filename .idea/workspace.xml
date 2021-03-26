@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="848cc729-d552-4aab-90c8-2f6564dd2a89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/practice/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practice/hooks/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/practice/hooks/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/practice/hooks/Hooks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/practice/stepdefs/CommonStepDefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/practice/stepdefs/CommonStepDefs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/practice/stepdefs/CommonStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practice/stepdefs/CommonStepDefs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,8 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -75,14 +76,9 @@
     </task>
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/bdd_in_practice$TestRunner.ic" NAME="TestRunner Coverage Results" MODIFIED="1616526080017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>practice.*</FILTER>
+    </SUITE>
   </component>
 </project>
