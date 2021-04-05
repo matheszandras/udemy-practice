@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-public class CookieSettingsPage extends BasePageObjects {
+public class CookieSettingsObjects extends BasePageObjects {
 
-    public CookieSettingsPage(WebDriver driver) {
+    public CookieSettingsObjects(WebDriver driver) {
         super(driver);
     }
 
