@@ -15,8 +15,8 @@ public class FrenchValidationStepDefs {
 
     @When("^I switch to French language$")
     public void switch_to_french() {
-        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(),15);
-        wait.until(ExpectedConditions.visibilityOf(frenchValidationObjects.languageSelector));
+    /*    WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(),15);
+        wait.until(ExpectedConditions.visibilityOf(frenchValidationObjects.languageSelector));*/
         frenchValidationObjects.languageSelector.click();
         frenchValidationObjects.language.click();
         Assert.assertEquals("Selected language isn't French", "Français", frenchValidationObjects.languageSelector.getText());

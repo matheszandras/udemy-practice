@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="848cc729-d552-4aab-90c8-2f6564dd2a89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/practice/pageobject/FrenchValidationObjects.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/practice/pageobject/SearchObjects.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/practice/stepdefs/FrenchValidationStepDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/practice/stepdefs/SearchStepDefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/practice/pageobject/CookieSettingsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practice/pageobject/CookieSettingsObjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/practice/stepdefs/CookieSettingsStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practice/stepdefs/CookieSettingsStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UdemyFrenchSearchValidation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UdemyFrenchSearchValidation.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/UdemySearch.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/UdemySearch.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/UdemyFrenchSearchValidation.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/UdemyFrenchSearchValidation.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/practice/pageobject/CookieSettingsObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practice/pageobject/CookieSettingsObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/practice/pageobject/FrenchValidationObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practice/pageobject/FrenchValidationObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/practice/pageobject/SearchObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practice/pageobject/SearchObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/practice/stepdefs/FrenchValidationStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practice/stepdefs/FrenchValidationStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/chromedriver.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +39,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Search for beginner, English 'Tableau' courses.">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Andras_Mathesz\IdeaProjects\newpractice\practicerepo\src\test\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andras_Mathesz\IdeaProjects\newpractice\practicerepo\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cucumber Java.Scenario: Set Functional cookies as active and check in the settings">
     <configuration name="Feature: UdemyFrenchSearchValidation" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/UdemyFrenchSearchValidation.feature" />
@@ -89,6 +94,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: Set Functional cookies as active and check in the settings" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/UdemyCookieSettings.feature" />
+      <option name="GLUE" value="practice.stepdefs practice.hooks" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="practice" />
+      <option name="NAME_FILTER" value="^Set Functional cookies as active and check in the settings$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^Set Functional cookies as active and check in the settings$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Set Functional cookies as active and check in the settings" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Switch to French language and search for Android mobile app development courses" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/UdemyFrenchSearchValidation.feature" />
+      <option name="GLUE" value="practice.stepdefs practice.hooks" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="practice" />
+      <option name="NAME_FILTER" value="^Switch to French language and search for Android mobile app development courses$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^Switch to French language and search for Android mobile app development courses$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Switch to French language and search for Android mobile app development courses" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="practice" />
       <extension name="coverage">
@@ -106,6 +151,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Set Functional cookies as active and check in the settings" />
+        <item itemvalue="Cucumber Java.Scenario: Switch to French language and search for Android mobile app development courses" />
         <item itemvalue="Cucumber Java.Scenario: Search for beginner, English 'Tableau' courses." />
         <item itemvalue="Cucumber Java.Feature: UdemyFrenchSearchValidation" />
         <item itemvalue="JUnit.TestRunner" />

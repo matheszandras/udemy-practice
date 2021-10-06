@@ -19,7 +19,9 @@ public class CookieSettingsObjects extends BasePageObjects {
     public WebElement functionalCookieSlider;
     @FindBy(css = "#onetrust-pc-sdk > div.ot-pc-footer > div.ot-btn-container > button")
     public WebElement cookieSettingsConfirmationButton;
-    @FindBy(css = "#udemy > div.main-content-wrapper > footer > div.footer-section.footer-section-main > div.links-and-locale > ul:nth-child(4) > li:nth-child(3) > a")
+    @FindBy()
+            //(css = "#udemy > div.main-content-wrapper > footer > div.footer-section.footer-section-main > div.links-and-locale > ul:nth-child(4) > li:nth-child(3) > a")
+
     public WebElement cookieSettingsFooter;
     @FindBy(css = "#ot-desc-id-C0003 > div.ot-grp-hdr1 > div.ot-tgl > span")
     public WebElement functionalCookieStatus;

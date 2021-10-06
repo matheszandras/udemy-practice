@@ -10,7 +10,7 @@ public class SearchObjects extends BasePageObjects {
         super(driver);
     }
 
-    @FindBy(xpath = "/html/body/div[1]/div[1]/div[3]/div[2]/form/input[2]")
+    @FindBy(css = "#u172-search-form-autocomplete--3")
     public WebElement mainPageSearchBox;
 
     @FindBy(id = "icon-search")
