@@ -23,7 +23,7 @@ public class CookieSettingsObjects extends BasePageObjects {
             //(css = "#udemy > div.main-content-wrapper > footer > div.footer-section.footer-section-main > div.links-and-locale > ul:nth-child(4) > li:nth-child(3) > a")
 
     public WebElement cookieSettingsFooter;
-    @FindBy(css = "#ot-desc-id-C0003 > div.ot-grp-hdr1 > div.ot-tgl > span")
+    @FindBy(id = "onetrust-pc-btn-handler")
     public WebElement functionalCookieStatus;
     @FindBy (css = "#ot-pc-content > div > div.ot-sdk-four.ot-sdk-columns.ot-tab-list > ul > li:nth-child(3) > div")
     public WebElement socialMediaCookieTab;
