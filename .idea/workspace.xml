@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="848cc729-d552-4aab-90c8-2f6564dd2a89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/practice/pageobject/CookieSettingsObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/practice/pageobject/CookieSettingsObjects.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/chromedriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/chromedriver.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
