@@ -22,11 +22,10 @@ public class CookieSettingsObjects extends BasePageObjects {
     @FindBy(css = "#onetrust-pc-sdk > div.ot-pc-footer > div.ot-btn-container > button")
     //save-preference-btn-handler onetrust-close-btn-handler
     public WebElement cookieSettingsConfirmationButton;
-    @FindBy(className = "ud-btn udlite-btn ud-btn-large udlite-btn-large ud-btn-link udlite-btn-link ud-text-sm link white-link")
-            //(css = "#udemy > div.main-content-wrapper > footer > div.footer-section.footer-section-main > div.links-and-locale > ul:nth-child(4) > li:nth-child(3) > a")
+    @FindBy(css = "#udemy > div.main-content-wrapper > div.ud-app-loader.ud-component--footer--footer-container.ud-footer-container.ud-app-loaded > footer > div > div.links-and-language-selector > ul:nth-child(4) > li:nth-child(3) > button > span")
 
     public WebElement cookieSettingsFooter;
-    @FindBy(id = "onetrust-pc-btn-handler")
+    @FindBy(xpath = "//*[@id=\"ot-desc-id-C0003\"]/div[1]/div[1]/span")
     public WebElement functionalCookieStatus;
     @FindBy (css = "#ot-pc-content > div > div.ot-sdk-four.ot-sdk-columns.ot-tab-list > ul > li:nth-child(3) > div")
     public WebElement socialMediaCookieTab;

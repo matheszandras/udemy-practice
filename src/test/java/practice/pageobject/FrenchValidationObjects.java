@@ -10,10 +10,10 @@ public class FrenchValidationObjects extends BasePageObjects {
         super(driver);
     }
 
-    @FindBy(xpath = "//*[@id=\"u349-popper-trigger--5\"]/svg[1]")
+    @FindBy(xpath = "//*[@id=\"udemy\"]/div[1]/div[1]/div[3]/div[8]/button")
     public WebElement languageSelector;
 
-    @FindBy(css = "#u60-popper-content--6 > div > div > div > ul > li:nth-child(4) > a > div")
+    @FindBy(xpath = "//*[@id=\"udemy\"]/div[15]/div/div[2]/div[2]/a[4]")
     public WebElement language;
 
     @FindBy(css = "#u60-popper-content--6 > div > div > div > ul > li:nth-child(4) > a > div")

@@ -10,7 +10,7 @@ public class SearchObjects extends BasePageObjects {
         super(driver);
     }
 
-    @FindBy(css = "#u172-search-form-autocomplete--3")
+    @FindBy(className = "ud-text-input udlite-text-input ud-text-input-small udlite-text-input-small ud-text-sm udlite-text-sm ud-search-form-autocomplete-input js-header-search-field")
     public WebElement mainPageSearchBox;
 
     @FindBy(id = "icon-search")
