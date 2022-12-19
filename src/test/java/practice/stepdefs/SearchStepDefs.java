@@ -15,6 +15,8 @@ public class SearchStepDefs {
 
     @When("^I search for (.+) in the main search field$")
     public void search_for_keyword(String keyword) {
+       /* WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(),5);
+        wait.until(ExpectedConditions.visibilityOf(searchValidation.mainPageSearchBox));*/
         searchValidation.mainPageSearchBox.sendKeys(keyword);
         searchValidation.searchIcon.click();
     }

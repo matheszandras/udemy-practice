@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import practice.hooks.Hooks;
@@ -15,10 +16,17 @@ public class FrenchValidationStepDefs {
 
     @When("^I switch to French language$")
     public void switch_to_french() {
-    /*    WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(),15);
-        wait.until(ExpectedConditions.visibilityOf(frenchValidationObjects.languageSelector));*/
-        frenchValidationObjects.languageSelector.click();
-        frenchValidationObjects.language.click();
+
+        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(),5);
+        wait.until(ExpectedConditions.elementToBeClickable(frenchValidationObjects.languageSelector));
+        ((JavascriptExecutor)Hooks.getWebDriver()).executeScript("arguments[0].click();", frenchValidationObjects.languageSelector);
+        //frenchValidationObjects.languageSelector.click();
+        
+
+        WebDriverWait wait2 = new WebDriverWait(Hooks.getWebDriver(),5);
+        wait.until(ExpectedConditions.visibilityOf(frenchValidationObjects.language));
+        ((JavascriptExecutor)Hooks.getWebDriver()).executeScript("arguments[0].click();",frenchValidationObjects.language);
+        //frenchValidationObjects.language.click();
         Assert.assertEquals("Selected language isn't French", "Français", frenchValidationObjects.languageSelector.getText());
     }
 

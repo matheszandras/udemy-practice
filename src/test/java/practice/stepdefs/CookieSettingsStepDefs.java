@@ -17,7 +17,7 @@ public class CookieSettingsStepDefs {
     public void click_cookie_settings() {
         WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
         wait.until(ExpectedConditions.elementToBeClickable(cookieSettingsObjects.cookiePopup));
-        cookieSettingsObjects.cookiePopup.click();
+        cookieSettingsObjects.cookiePopupSettings.click();
     }
 
     @And("^I set the Functional cookies as active$")
