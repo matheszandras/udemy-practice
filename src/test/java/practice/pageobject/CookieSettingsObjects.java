@@ -22,7 +22,8 @@ public class CookieSettingsObjects extends BasePageObjects {
     @FindBy(css = "#onetrust-pc-sdk > div.ot-pc-footer > div.ot-btn-container > button")
     //save-preference-btn-handler onetrust-close-btn-handler
     public WebElement cookieSettingsConfirmationButton;
-    @FindBy(css = "#udemy > div.main-content-wrapper > div.ud-app-loader.ud-component--footer--footer-container.ud-footer-container.ud-app-loaded > footer > div > div.links-and-language-selector > ul:nth-child(4) > li:nth-child(3) > button > span")
+    @FindBy (css = "#udemy > div.ud-main-content-wrapper > div.ud-app-loader.ud-component--footer--footer-container.ud-footer-container.ud-app-loaded > footer > div.footer-section.footer-section-main > div.links-and-language-selector > ul:nth-child(4) > li:nth-child(3) > button > span")
+            //(css = "#udemy > div.main-content-wrapper > div.ud-app-loader.ud-component--footer--footer-container.ud-footer-container.ud-app-loaded > footer > div > div.links-and-language-selector > ul:nth-child(4) > li:nth-child(3) > button > span")
 
     public WebElement cookieSettingsFooter;
     @FindBy(xpath = "//*[@id=\"ot-desc-id-C0003\"]/div[1]/div[1]/span")
