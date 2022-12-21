@@ -23,7 +23,7 @@ public class SearchStepDefs {
 
     @And("^I select (.+) and (.+) and$")
     public void select_filters(String level, String language) {
-        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
+        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 10);
         wait.until(ExpectedConditions.visibilityOf(searchValidation.beginnerFilter));
         searchValidation.beginnerFilter.click();
         searchValidation.englishFilter.click();

@@ -10,13 +10,13 @@ public class SearchObjects extends BasePageObjects {
         super(driver);
     }
 
-    @FindBy(id = "u131-search-form-autocomplete--3")
+    @FindBy(xpath = "//*[contains(@id,'-search-form-autocomplete-')]")
     public WebElement mainPageSearchBox;
 
-    @FindBy(id = "icon-search")
+    @FindBy(css = "button[type='submit']")
     public WebElement searchIcon;
 
-    @FindBy(css = "#filter-form > div > div:nth-child(2) > div.panel--content-wrapper--1yFBX > div > div > div > div > fieldset > label:nth-child(2) > svg")
+    @FindBy(css = "label[for='u195-checkbox--93']")
     public WebElement beginnerFilter;
 
     @FindBy(css = "#filter-form > div > div:nth-child(3) > div.panel--content-wrapper--1yFBX > div > div > div > div > fieldset > label:nth-child(2) > svg")
