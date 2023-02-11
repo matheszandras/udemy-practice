@@ -1,6 +1,6 @@
 package practice.stepdefs;
 
-import cucumber.api.java.en.Given;
+import io.cucumber.java.en.Given;
 import practice.hooks.Hooks;
 
 public class CommonStepDefs {
