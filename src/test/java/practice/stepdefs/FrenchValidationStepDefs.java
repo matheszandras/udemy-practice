@@ -12,26 +12,15 @@ import practice.pageobject.FrenchValidationObjects;
 
 public class FrenchValidationStepDefs {
 
-    public FrenchValidationObjects frenchValidationObjects = new FrenchValidationObjects(Hooks.getWebDriver());
+    public FrenchValidationObjects frenchValidationObjects = new FrenchValidationObjects();
 
     @When("^I switch to French language$")
     public void switch_to_french() {
         // Click on language selector
         WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
         wait.until(ExpectedConditions.elementToBeClickable(frenchValidationObjects.languageSelector));
-        ((JavascriptExecutor) Hooks.getWebDriver()).executeScript("arguments[0].click();", frenchValidationObjects.languageSelector);
-        //frenchValidationObjects.languageSelector.click();
-        // Close cookie settings
-        WebDriverWait wait1 = new WebDriverWait(Hooks.getWebDriver(), 2);
-        wait1.until(ExpectedConditions.visibilityOf(frenchValidationObjects.acceptCookies));
-        frenchValidationObjects.acceptCookies.click();
-        // No clue, why doesn't find this one:
-        WebDriverWait wait2 = new WebDriverWait(Hooks.getWebDriver(), 5);
-        wait2.until(ExpectedConditions.visibilityOf(frenchValidationObjects.language));
-        ((JavascriptExecutor) Hooks.getWebDriver()).executeScript("arguments[0].click();", frenchValidationObjects.language);
-        //frenchValidationObjects.language.click();
-        WebDriverWait wait3 = new WebDriverWait(Hooks.getWebDriver(), 5);
-        wait3.until(ExpectedConditions.visibilityOf(frenchValidationObjects.languageSelector));
+        frenchValidationObjects.languageSelector.click();
+        frenchValidationObjects.language.click();
         Assert.assertEquals("Selected language isn't French", "Français", frenchValidationObjects.languageSelector.getText());
     }
 

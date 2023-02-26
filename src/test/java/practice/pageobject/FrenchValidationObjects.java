@@ -6,14 +6,14 @@ import org.openqa.selenium.support.FindBy;
 
 public class FrenchValidationObjects extends BasePageObjects {
 
-    public FrenchValidationObjects(WebDriver driver) {
-        super(driver);
+    public FrenchValidationObjects() {
+        super();
     }
 
-    @FindBy(xpath = "//*[@id=\"udemy\"]/div[1]/div[1]/div[3]/div[8]/button")
+    @FindBy(css = "button[class*='language-selector']")
     public WebElement languageSelector;
 
-    @FindBy(css = "#udemy > div.modal--dialog-container--N5oZ1 > div > div.udlite-in-udheavy.language-selector-modal-trigger--modal--3teju.ud-modal.modal--dialog--3wvl7.modal--default-size--PTjsn > div.language-list--multi-column--3jwlU > a:nth-child(4)")
+    @FindBy(css = "span[lang*='fr']")
     public WebElement language;
 
     @FindBy(css = "#u60-popper-content--6 > div > div > div > ul > li:nth-child(4) > a > div")
@@ -21,15 +21,15 @@ public class FrenchValidationObjects extends BasePageObjects {
 
     @FindBy(id = "onetrust-accept-btn-handler")
     public WebElement acceptCookies;
-    @FindBy(css = "#u79-search-form-autocomplete--1")
+    @FindBy(css = "input[placeholder*='Rechercher']")
     public WebElement searchBox;
 
-    @FindBy(id = "icon-search")
+    @FindBy(css = "button[type*='submit']")
     public WebElement searchButton;
 
-    @FindBy(css = "#u74-popper-trigger--196 > div")
+    @FindBy(css = "div[id*='u37-popper-trigger--141']")
     public WebElement firstAndroidCourse;
 
-    @FindBy(className = "clp-lead__element-item clp-lead__locale")
+    @FindBy(css = "#fr div.ud-main-content-wrapper div.ud-main-content div.paid-course-landing-page__container > div.top-container.dark-background div.clp-lead__element-meta div.clp-lead__element-item.clp-lead__caption span")
     public WebElement courseLanguage;
 }

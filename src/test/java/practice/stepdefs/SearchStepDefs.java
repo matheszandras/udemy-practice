@@ -11,7 +11,7 @@ import practice.pageobject.SearchObjects;
 
 public class SearchStepDefs {
 
-    public SearchObjects searchValidation = new SearchObjects(Hooks.getWebDriver());
+    public SearchObjects searchValidation = new SearchObjects();
 
     @When("^I search for (.+) in the main search field$")
     public void search_for_keyword(String keyword) {
@@ -23,8 +23,11 @@ public class SearchStepDefs {
 
     @And("^I select (.+) and (.+) and$")
     public void select_filters(String level, String language) {
-        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 10);
-        wait.until(ExpectedConditions.visibilityOf(searchValidation.beginnerFilter));
+        /*WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(),5);
+        wait.until(ExpectedConditions.visibilityOf(searchValidation.levelDropdown));*/
+        searchValidation.levelDropdown.click();
+       /* WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 10);
+        wait.until(ExpectedConditions.visibilityOf(searchValidation.beginnerFilter));*/
         searchValidation.beginnerFilter.click();
         searchValidation.englishFilter.click();
     }
@@ -36,6 +39,8 @@ public class SearchStepDefs {
 
     @And("^I search for (.+) in the reviews$")
     public void search_text(String text) {
+        //all review
+        searchValidation.allReview.click();
         searchValidation.reviewSearchField.sendKeys(text);
         searchValidation.reviewSearchButton.click();
     }

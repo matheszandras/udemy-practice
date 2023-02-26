@@ -11,7 +11,7 @@ import practice.pageobject.CookieSettingsObjects;
 
 public class CookieSettingsStepDefs {
 
-    public CookieSettingsObjects cookieSettingsObjects = new CookieSettingsObjects(Hooks.getWebDriver());
+    public CookieSettingsObjects cookieSettingsObjects = new CookieSettingsObjects();
 
     @When("^I click on the cookie settings$")
     public void click_cookie_settings() {
@@ -23,8 +23,8 @@ public class CookieSettingsStepDefs {
     @And("^I set the Functional cookies as active$")
     public void set_functional_cookies() {
         cookieSettingsObjects.functionalCookieTab.click();
-        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
-        wait.until(ExpectedConditions.elementToBeClickable(cookieSettingsObjects.functionalCookieSlider));
+//        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
+ //       wait.until(ExpectedConditions.elementToBeClickable(cookieSettingsObjects.functionalCookieSlider));
         cookieSettingsObjects.functionalCookieSlider.click();
         Assert.assertEquals("Functional cookies aren't enabled", "Active", cookieSettingsObjects.functionalCookieStatus.getText());
     }
