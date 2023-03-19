@@ -22,6 +22,7 @@ public class Hooks {
         options.addArguments("--incognito","--disable-blink-features=AutomationControlled");
         **/
         chromeDriver = new ChromeDriver();
+        chromeDriver.manage().window().maximize();
     }
 
     @After

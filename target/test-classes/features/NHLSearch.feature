@@ -4,7 +4,7 @@ Feature: Search for Jim Hughson retirement date
 
     Given I open <NHL> website
     When I search for <name>
-    And I search for the latest result
+    And I check the latest result
     Then I check the retirement date
     #September 21, 2021
 
