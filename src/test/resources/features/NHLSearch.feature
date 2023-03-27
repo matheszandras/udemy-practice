@@ -6,8 +6,7 @@ Feature: Search for Jim Hughson retirement date
     When I search for <name>
     And I check the latest result
     Then I check the retirement date
-    #September 21, 2021
 
     Examples:
-      | NHL                 | name        |
-      | https://www.nhl.com | Jim Hughson |
+      | NHL                 | name           |
+      | https://www.nhl.com | Jim Hughson 42 |

@@ -13,8 +13,10 @@ public class BasePageObjects {
         this.driver = Hooks.getWebDriver();
         PageFactory.initElements(driver, this);
     }
-    public BasePageObjects open () {
+
+    public BasePageObjects open() {
         driver.get(url);
         return this;
     }
+
 }

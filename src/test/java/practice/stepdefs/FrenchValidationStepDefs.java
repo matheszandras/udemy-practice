@@ -4,10 +4,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import practice.hooks.Hooks;
 import practice.pageobject.FrenchValidationObjects;
 
 public class FrenchValidationStepDefs {
@@ -16,23 +12,18 @@ public class FrenchValidationStepDefs {
 
     @When("^I switch to French language$")
     public void switch_to_french() {
-        // Click on language selector
-        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
-        wait.until(ExpectedConditions.elementToBeClickable(frenchValidationObjects.languageSelector));
-        frenchValidationObjects.languageSelector.click();
-        frenchValidationObjects.language.click();
+        frenchValidationObjects.switchLanguage();
         Assert.assertEquals("Selected language isn't French", "Français", frenchValidationObjects.languageSelector.getText());
     }
 
-    @And("^I search for (.+) phrase$")
+    @And("^I search (.+) phrase$")
     public void search_for_android_courses(String phrase) {
-        frenchValidationObjects.searchBox.sendKeys(phrase);
-        frenchValidationObjects.searchButton.click();
+        frenchValidationObjects.searchCourse(phrase);
     }
 
     @Then("^I check the first result$")
     public void check_first_result() {
-        frenchValidationObjects.firstAndroidCourse.click();
+        frenchValidationObjects.checkFirstCourse();
         Assert.assertEquals("The language of the selected course isn't French", "Français", frenchValidationObjects.courseLanguage.getText());
     }
 }

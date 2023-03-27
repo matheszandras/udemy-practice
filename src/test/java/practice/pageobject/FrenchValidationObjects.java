@@ -1,8 +1,11 @@
 package practice.pageobject;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import practice.hooks.Hooks;
 
 public class FrenchValidationObjects extends BasePageObjects {
 
@@ -16,9 +19,6 @@ public class FrenchValidationObjects extends BasePageObjects {
     @FindBy(css = "span[lang*='fr']")
     public WebElement language;
 
-    @FindBy(css = "#u60-popper-content--6 > div > div > div > ul > li:nth-child(4) > a > div")
-    public WebElement selectedLanguage;
-
     @FindBy(id = "onetrust-accept-btn-handler")
     public WebElement acceptCookies;
     @FindBy(css = "input[placeholder*='Rechercher']")
@@ -27,9 +27,31 @@ public class FrenchValidationObjects extends BasePageObjects {
     @FindBy(css = "button[type*='submit']")
     public WebElement searchButton;
 
-    @FindBy(css = "div[id*='u37-popper-trigger--141']")
+    @FindBy(css = "div[class^='course-list--container']>div:first-child")
     public WebElement firstAndroidCourse;
 
-    @FindBy(css = "#fr div.ud-main-content-wrapper div.ud-main-content div.paid-course-landing-page__container > div.top-container.dark-background div.clp-lead__element-meta div.clp-lead__element-item.clp-lead__caption span")
+    @FindBy(css = "div[class^=language-list--multi-column] a:nth-child(4)")
     public WebElement courseLanguage;
+
+    public void switchLanguage() {
+        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
+        wait.until(ExpectedConditions.elementToBeClickable(languageSelector));
+        languageSelector.click();
+        language.click();
+    }
+
+    public void searchCourse(String phrase) {
+        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
+        wait.until(ExpectedConditions.visibilityOf(acceptCookies));
+        acceptCookies.click();
+        searchBox.sendKeys(phrase);
+        searchBox.sendKeys(Keys.ENTER);
+    }
+
+    public void checkFirstCourse() {
+        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 10);
+        wait.until(ExpectedConditions.elementToBeClickable(firstAndroidCourse));
+        firstAndroidCourse.click();
+    }
+
 }
