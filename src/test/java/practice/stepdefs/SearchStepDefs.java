@@ -16,8 +16,8 @@ public class SearchStepDefs {
     }
 
     @And("^I select (.+) and (.+) and$")
-    public void select_filters(String level, String language) {
-        searchValidation.selectFilters(level, language);
+    public void select_filters() {
+        searchValidation.selectFilters();
     }
 
     @And("^I select the first$")

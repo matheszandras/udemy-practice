@@ -17,12 +17,6 @@ public class SearchObjects extends BasePageObjects {
     @FindBy(css = " input[placeholder*='Search for anything']")
     public WebElement mainPageSearchBox;
 
-    @FindBy(css = "#udemy > div.ud-main-content-wrapper > div.ud-app-loader.ud-component--header-v6--header.ud-header.ud-app-loaded > div.ud-text-sm.header--header--1SLKV.header--flex-middle--2QeVR > div.ud-search-form-autocomplete.header--search-bar--1g81R.ud-form-group > form > button > svg")
-    //#udemy > div.ud-main-content-wrapper > div.ud-app-loader.ud-component--header-v6--header.ud-header.ud-app-loaded > div.ud-text-sm.header--header--1SLKV.header--flex-middle--2QeVR > div.ud-search-form-autocomplete.header--search-bar--1g81R.ud-form-group > form > button > svg
-    //button[type='submit']
-    //svg[aria-label*='Submit search']
-    public WebElement searchIcon;
-
     @FindBy(css = "input[value*='beginner']")
     public WebElement beginnerFilter;
 
@@ -52,10 +46,9 @@ public class SearchObjects extends BasePageObjects {
         wait.until(ExpectedConditions.visibilityOf(mainPageSearchBox));
         mainPageSearchBox.sendKeys(keyword);
         mainPageSearchBox.sendKeys(Keys.ENTER);
-        searchIcon.click();
     }
 
-    public void selectFilters (String level, String language){
+    public void selectFilters (){
         levelDropdown.click();
         beginnerFilter.click();
         englishFilter.click();

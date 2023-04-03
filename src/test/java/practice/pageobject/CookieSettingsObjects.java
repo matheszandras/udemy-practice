@@ -14,7 +14,7 @@ public class CookieSettingsObjects extends BasePageObjects {
     }
 
     @FindBy(className = "ot-sdk-container")
-    public WebElement cookiePopup;
+    private WebElement cookiePopup;
     @FindBy(className = "cookie-setting-link")
     public WebElement cookiePopupSettings;
     @FindBy(id = "ot-header-id-C0003")

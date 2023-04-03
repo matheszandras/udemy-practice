@@ -24,9 +24,6 @@ public class FrenchValidationObjects extends BasePageObjects {
     @FindBy(css = "input[placeholder*='Rechercher']")
     public WebElement searchBox;
 
-    @FindBy(css = "button[type*='submit']")
-    public WebElement searchButton;
-
     @FindBy(css = "div[class^='course-list--container']>div:first-child")
     public WebElement firstAndroidCourse;
 

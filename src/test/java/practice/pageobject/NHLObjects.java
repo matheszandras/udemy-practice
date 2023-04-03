@@ -17,10 +17,7 @@ public class NHLObjects extends BasePageObjects {
     @FindBy(css = ".modal-body")
     public WebElement mainAd;
     @FindBy(css = "button[class='close'][aria-label='Close']")
-    //span[aria-hidden]
-    //button[class='close']
-    public WebElement mainAdClose;
-    //google_ads_iframe_/21668666170/nhl_web_en/homepage_0
+    public WebElement mainAdClose; // Note: this selector doesn't work
 
     @FindBy(className = "top-nav__search-container")
     public WebElement searchIcon;
