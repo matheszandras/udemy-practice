@@ -17,15 +17,15 @@ public class FrenchValidationObjects extends BasePageObjects {
     public WebElement languageSelector;
 
     @FindBy(css = "span[lang*='fr']")
-    public WebElement language;
+    private WebElement language;
 
     @FindBy(id = "onetrust-accept-btn-handler")
-    public WebElement acceptCookies;
+    private WebElement acceptCookies;
     @FindBy(css = "input[placeholder*='Rechercher']")
-    public WebElement searchBox;
+    private WebElement searchBox;
 
     @FindBy(css = "div[class^='course-list--container']>div:first-child")
-    public WebElement firstAndroidCourse;
+    private WebElement firstAndroidCourse;
 
     @FindBy(css = "div[class^=language-list--multi-column] a:nth-child(4)")
     public WebElement courseLanguage;

@@ -15,12 +15,6 @@ public class Hooks {
     @Before
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-       /**
-        Failed attempts to avoid Cloudflare bot recognition
-        ChromeOptions options =  new ChromeOptions();
-        options.addArguments("--disable-blink-features");
-        options.addArguments("--incognito","--disable-blink-features=AutomationControlled");
-        **/
         chromeDriver = new ChromeDriver();
         chromeDriver.manage().window().maximize();
     }

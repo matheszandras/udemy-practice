@@ -16,19 +16,19 @@ public class CookieSettingsObjects extends BasePageObjects {
     @FindBy(className = "ot-sdk-container")
     private WebElement cookiePopup;
     @FindBy(className = "cookie-setting-link")
-    public WebElement cookiePopupSettings;
+    private WebElement cookiePopupSettings;
     @FindBy(id = "ot-header-id-C0003")
-    public WebElement functionalCookieTab;
+    private WebElement functionalCookieTab;
     @FindBy(css = "label[for*='ot-group-id-C0003']")
-    public WebElement functionalCookieSlider;
+    private WebElement functionalCookieSlider;
     @FindBy(css = "button.save-preference-btn-handler")
-    public WebElement cookieSettingsConfirmationButton;
+    private WebElement cookieSettingsConfirmationButton;
     @FindBy(css = "button[data-purpose='footer.links.cookie_preferences']")
-    public WebElement cookieSettingsFooter;
+    private WebElement cookieSettingsFooter;
     @FindBy(css = "#ot-desc-id-C0003 > div.ot-grp-hdr1 > div.ot-tgl > span")
     public WebElement functionalCookieStatus;
     @FindBy(id = "ot-header-id-C0005")
-    public WebElement socialMediaCookieTab;
+    private WebElement socialMediaCookieTab;
     @FindBy(css = "#ot-desc-id-C0005 > div.ot-grp-hdr1 > div.ot-tgl > span")
     public WebElement socialMediaCookieStatus;
 

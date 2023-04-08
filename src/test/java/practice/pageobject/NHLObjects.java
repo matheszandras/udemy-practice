@@ -20,19 +20,19 @@ public class NHLObjects extends BasePageObjects {
     public WebElement mainAdClose; // Note: this selector doesn't work
 
     @FindBy(className = "top-nav__search-container")
-    public WebElement searchIcon;
+    private WebElement searchIcon;
 
     @FindBy(id = "top-nav__search-autocomplete__input")
-    public WebElement searchBar;
+    private WebElement searchBar;
 
     @FindBy(css = "div.ss-options__main.nav-pills.nav-pills--left.nav-pills--no-border > a")
-    public WebElement advancedSettings;
+    private WebElement advancedSettings;
 
     @FindBy(css = "#ss-sort-dropdown")
-    public WebElement sortDropdown;
+    private WebElement sortDropdown;
 
     @FindBy(css = "a[data-value*='new']")
-    public WebElement newest;
+    private WebElement newest;
 
     @FindBy(css = "section:nth-child(1)  article  span")
     public WebElement retirementDate;

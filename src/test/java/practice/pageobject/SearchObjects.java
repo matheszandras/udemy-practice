@@ -15,27 +15,27 @@ public class SearchObjects extends BasePageObjects {
     }
 
     @FindBy(css = " input[placeholder*='Search for anything']")
-    public WebElement mainPageSearchBox;
+    private WebElement mainPageSearchBox;
 
     @FindBy(css = "input[value*='beginner']")
-    public WebElement beginnerFilter;
+    private WebElement beginnerFilter;
 
     @FindBy(css = "div[class^='show-more-module--with-gradient'] > div > div > label:first-child input[name='lang']")
-    public WebElement englishFilter;
+    private WebElement englishFilter;
 
     @FindBy(css = "div[class^='course-list--container']>div:first-child")
-    public WebElement firstFilteredResult;
+    private WebElement firstFilteredResult;
     @FindBy(css = "button[class*='reviews--trigger-button']")
-    public WebElement allReview;
+    private WebElement allReview;
 
     @FindBy(css = "input[placeholder*='Search reviews']")
-    public WebElement reviewSearchField;
+    private WebElement reviewSearchField;
 
     @FindBy(css = "button[class*='reviews-modal--search-submit-button']")
-    public WebElement reviewSearchButton;
+    private WebElement reviewSearchButton;
 
     @FindBy(css = "form[id=filter-form] > div > div:nth-child(6)")
-    public WebElement levelDropdown;
+    private WebElement levelDropdown;
 
     @FindBy(css = "reviews-modal--reviews-modal-content")
     public WebElement textSearchResult;
