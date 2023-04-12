@@ -1,37 +1,66 @@
 package practice.pageobject;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import practice.hooks.Hooks;
 
 public class SearchObjects extends BasePageObjects {
 
-    public SearchObjects(WebDriver driver) {
-        super(driver);
+    public SearchObjects() {
+        super();
     }
 
-    @FindBy(xpath = "//*[contains(@id,'-search-form-autocomplete-')]")
-    public WebElement mainPageSearchBox;
+    @FindBy(css = " input[placeholder*='Search for anything']")
+    private WebElement mainPageSearchBox;
 
-    @FindBy(css = "button[type='submit']")
-    public WebElement searchIcon;
+    @FindBy(css = "input[value*='beginner']")
+    private WebElement beginnerFilter;
 
-    @FindBy(css = "label[for='u195-checkbox--93']")
-    public WebElement beginnerFilter;
+    @FindBy(css = "div[class^='show-more-module--with-gradient'] > div > div > label:first-child input[name='lang']")
+    private WebElement englishFilter;
 
-    @FindBy(css = "#filter-form > div > div:nth-child(3) > div.panel--content-wrapper--1yFBX > div > div > div > div > fieldset > label:nth-child(2) > svg")
-    public WebElement englishFilter;
+    @FindBy(css = "div[class^='course-list--container']>div:first-child")
+    private WebElement firstFilteredResult;
+    @FindBy(css = "button[class*='reviews--trigger-button']")
+    private WebElement allReview;
 
-    @FindBy(css = "#u280-popper-trigger--384 > div > div.course-card--image-wrapper--Sxd90 > img")
-    public WebElement firstFilteredResult;
+    @FindBy(css = "input[placeholder*='Search reviews']")
+    private WebElement reviewSearchField;
 
-    @FindBy(css = "#u205-form-group--8")
-    public WebElement reviewSearchField;
+    @FindBy(css = "button[class*='reviews-modal--search-submit-button']")
+    private WebElement reviewSearchButton;
 
-    @FindBy(css = "#udemy > div.main-content-wrapper > div.main-content > div.paid-course-landing-page__container > div.bottom-container > div:nth-child(17) > div > div > div > div > div > div.reviews-section--sub-title--3Lxry > div > div.reviews-section--search-filter--1hXkA > div > form > button")
-    public WebElement reviewSearchButton;
+    @FindBy(css = "form[id=filter-form] > div > div:nth-child(6)")
+    private WebElement levelDropdown;
 
-    @FindBy(css = "#udemy > div.main-content-wrapper > div.main-content > div.paid-course-landing-page__container > div.bottom-container > div:nth-child(17) > div > div > div > div > div > div.reviews-section--sub-title--3Lxry > div.reviews-section--searched-term--3G2Gx")
+    @FindBy(css = "reviews-modal--reviews-modal-content")
     public WebElement textSearchResult;
 
+
+    public void searchKeyword (String keyword){
+        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
+        wait.until(ExpectedConditions.visibilityOf(mainPageSearchBox));
+        mainPageSearchBox.sendKeys(keyword);
+        mainPageSearchBox.sendKeys(Keys.ENTER);
+    }
+
+    public void selectFilters (){
+        levelDropdown.click();
+        beginnerFilter.click();
+        englishFilter.click();
+    }
+
+    public void selectFirst(){
+        firstFilteredResult.click();
+    }
+
+    public void searchInReviews(String text){
+        allReview.click();
+        reviewSearchField.sendKeys(text);
+        reviewSearchButton.click();
+    }
 }

@@ -1,35 +1,54 @@
 package practice.pageobject;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import practice.hooks.Hooks;
 
 public class FrenchValidationObjects extends BasePageObjects {
 
-    public FrenchValidationObjects(WebDriver driver) {
-        super(driver);
+    public FrenchValidationObjects() {
+        super();
     }
 
-    @FindBy(xpath = "//*[@id=\"udemy\"]/div[1]/div[1]/div[3]/div[8]/button")
+    @FindBy(css = "button[class*='language-selector']")
     public WebElement languageSelector;
 
-    @FindBy(css = "#udemy > div.modal--dialog-container--N5oZ1 > div > div.udlite-in-udheavy.language-selector-modal-trigger--modal--3teju.ud-modal.modal--dialog--3wvl7.modal--default-size--PTjsn > div.language-list--multi-column--3jwlU > a:nth-child(4)")
-    public WebElement language;
-
-    @FindBy(css = "#u60-popper-content--6 > div > div > div > ul > li:nth-child(4) > a > div")
-    public WebElement selectedLanguage;
+    @FindBy(css = "span[lang*='fr']")
+    private WebElement language;
 
     @FindBy(id = "onetrust-accept-btn-handler")
-    public WebElement acceptCookies;
-    @FindBy(css = "#u79-search-form-autocomplete--1")
-    public WebElement searchBox;
+    private WebElement acceptCookies;
+    @FindBy(css = "input[placeholder*='Rechercher']")
+    private WebElement searchBox;
 
-    @FindBy(id = "icon-search")
-    public WebElement searchButton;
+    @FindBy(css = "div[class^='course-list--container']>div:first-child")
+    private WebElement firstAndroidCourse;
 
-    @FindBy(css = "#u74-popper-trigger--196 > div")
-    public WebElement firstAndroidCourse;
-
-    @FindBy(className = "clp-lead__element-item clp-lead__locale")
+    @FindBy(css = "div[class^=language-list--multi-column] a:nth-child(4)")
     public WebElement courseLanguage;
+
+    public void switchLanguage() {
+        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
+        wait.until(ExpectedConditions.elementToBeClickable(languageSelector));
+        languageSelector.click();
+        language.click();
+    }
+
+    public void searchCourse(String phrase) {
+        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
+        wait.until(ExpectedConditions.visibilityOf(acceptCookies));
+        acceptCookies.click();
+        searchBox.sendKeys(phrase);
+        searchBox.sendKeys(Keys.ENTER);
+    }
+
+    public void checkFirstCourse() {
+        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 10);
+        wait.until(ExpectedConditions.elementToBeClickable(firstAndroidCourse));
+        firstAndroidCourse.click();
+    }
+
 }

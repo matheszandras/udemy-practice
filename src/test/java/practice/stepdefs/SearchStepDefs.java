@@ -4,40 +4,30 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import practice.hooks.Hooks;
 import practice.pageobject.SearchObjects;
 
 public class SearchStepDefs {
 
-    public SearchObjects searchValidation = new SearchObjects(Hooks.getWebDriver());
+    public SearchObjects searchValidation = new SearchObjects();
 
-    @When("^I search for (.+) in the main search field$")
+    @When("^I search (.+) in the main search field$")
     public void search_for_keyword(String keyword) {
-        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
-        wait.until(ExpectedConditions.visibilityOf(searchValidation.mainPageSearchBox));
-        searchValidation.mainPageSearchBox.sendKeys(keyword);
-        searchValidation.searchIcon.click();
+        searchValidation.searchKeyword(keyword);
     }
 
     @And("^I select (.+) and (.+) and$")
-    public void select_filters(String level, String language) {
-        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 10);
-        wait.until(ExpectedConditions.visibilityOf(searchValidation.beginnerFilter));
-        searchValidation.beginnerFilter.click();
-        searchValidation.englishFilter.click();
+    public void select_filters() {
+        searchValidation.selectFilters();
     }
 
     @And("^I select the first$")
     public void select_first_result() {
-        searchValidation.firstFilteredResult.click();
+        searchValidation.selectFirst();
     }
 
     @And("^I search for (.+) in the reviews$")
     public void search_text(String text) {
-        searchValidation.reviewSearchField.sendKeys(text);
-        searchValidation.reviewSearchButton.click();
+        searchValidation.searchInReviews(text);
     }
 
     @Then("^I check the results$")

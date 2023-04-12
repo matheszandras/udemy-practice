@@ -1,36 +1,58 @@
 package practice.pageobject;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import practice.hooks.Hooks;
 
 
 public class CookieSettingsObjects extends BasePageObjects {
 
-    public CookieSettingsObjects(WebDriver driver) {
-        super(driver);
+    public CookieSettingsObjects() {
+        super();
     }
 
     @FindBy(className = "ot-sdk-container")
-    public WebElement cookiePopup;
+    private WebElement cookiePopup;
     @FindBy(className = "cookie-setting-link")
-    public WebElement cookiePopupSettings;
+    private WebElement cookiePopupSettings;
     @FindBy(id = "ot-header-id-C0003")
-    public WebElement functionalCookieTab;
-    @FindBy(css = "#ot-desc-id-C0003 > div.ot-grp-hdr1 > div.ot-tgl > label > span.ot-switch-nob")
-    public WebElement functionalCookieSlider;
-    @FindBy(css = "#onetrust-pc-sdk > div.ot-pc-footer > div.ot-btn-container > button")
-    //save-preference-btn-handler onetrust-close-btn-handler
-    public WebElement cookieSettingsConfirmationButton;
-    @FindBy (css = "#udemy > div.ud-main-content-wrapper > div.ud-app-loader.ud-component--footer--footer-container.ud-footer-container.ud-app-loaded > footer > div.footer-section.footer-section-main > div.links-and-language-selector > ul:nth-child(4) > li:nth-child(3) > button > span")
-            //(css = "#udemy > div.main-content-wrapper > div.ud-app-loader.ud-component--footer--footer-container.ud-footer-container.ud-app-loaded > footer > div > div.links-and-language-selector > ul:nth-child(4) > li:nth-child(3) > button > span")
-
-    public WebElement cookieSettingsFooter;
-    @FindBy(xpath = "//*[@id=\"ot-desc-id-C0003\"]/div[1]/div[1]/span")
+    private WebElement functionalCookieTab;
+    @FindBy(css = "label[for*='ot-group-id-C0003']")
+    private WebElement functionalCookieSlider;
+    @FindBy(css = "button.save-preference-btn-handler")
+    private WebElement cookieSettingsConfirmationButton;
+    @FindBy(css = "button[data-purpose='footer.links.cookie_preferences']")
+    private WebElement cookieSettingsFooter;
+    @FindBy(css = "#ot-desc-id-C0003 > div.ot-grp-hdr1 > div.ot-tgl > span")
     public WebElement functionalCookieStatus;
-    @FindBy (css = "#ot-pc-content > div > div.ot-sdk-four.ot-sdk-columns.ot-tab-list > ul > li:nth-child(3) > div")
-    public WebElement socialMediaCookieTab;
+    @FindBy(id = "ot-header-id-C0005")
+    private WebElement socialMediaCookieTab;
     @FindBy(css = "#ot-desc-id-C0005 > div.ot-grp-hdr1 > div.ot-tgl > span")
     public WebElement socialMediaCookieStatus;
 
+
+    public void setCookiePopupSettings() {
+        WebDriverWait wait = new WebDriverWait(Hooks.getWebDriver(), 5);
+        wait.until(ExpectedConditions.elementToBeClickable(cookiePopup));
+        cookiePopupSettings.click();
+    }
+
+    public void setFunctionalCookieTab() {
+        functionalCookieTab.click();
+        functionalCookieSlider.click();
+    }
+
+    public void cookieSettingsConfirmation() {
+        cookieSettingsConfirmationButton.click();
+    }
+
+    public void setCookieSettingsFooter() {
+        cookieSettingsFooter.click();
+    }
+
+    public void socialMediaCookieStatus() {
+        socialMediaCookieTab.click();
+    }
 }
